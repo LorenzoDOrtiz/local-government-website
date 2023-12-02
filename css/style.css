@@ -1,20 +1,20 @@
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
-
-
+    color:#ffffff;
+    background-color: rgb(54, 49, 49);
 }
-
 
 header {
     display: flex;
     position: fixed;
     justify-content: space-between;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     background-color: rgb(40, 35, 35);
     height: 80px;
     width: 100%;
@@ -45,23 +45,21 @@ header nav {
     list-style: none;
 }
 
-.navlinks a {
+.navlinks a, aside a {
     text-decoration: none;
     color: rgb(221, 214, 214);
 }
 
-.navlinks a:hover {
+.navlinks a:hover, aside a:hover {
     opacity: 0.9;
     color: darkgreen;
 }
 
 #contact-button {
     box-shadow: 10px 5px 5px black;
-    ;
     border: solid 1px darkgreen;
-    padding: 0px 5px;
+    padding: 0 5px;
     background-color: green;
-
 }
 
 #contact-button-link {
@@ -72,10 +70,55 @@ header nav {
     opacity: 0.7;
 }
 
-.banner {
+.statebanner {
     display: flex;
-    background-image: URL("https://eluho.wa.gov/sites/default/files/styles/front_banner/public/2023-03/MtShuksan-banner-2000x700_3.jpg?itok=hqYZ-uat");
+    background-image: URL("/resources/images/Washington/MtShuksan-banner-2000x700_3.jpg");
     background-size: cover;
+    height: 600px;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    top: 80px;
+}
+
+.olympiabanner {
+    display: flex;
+    background-image: URL("/resources/images/Olympia/olympia-capitol-campus-cherry-blossoms-by-just-experience-olympia-and-beyond-1024x530.jpg");
+    background-size: cover;
+    background-position: 50%;
+    height: 600px;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    top: 80px;
+}
+
+.seattlebanner {
+    display: flex;
+    background-image: URL("/resources/images/Seattle/Seattle_3_banner.jpg");
+    background-size: cover;
+    background-position: 50%;
+    height: 600px;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    top: 80px;
+}
+
+.yakimabanner {
+    display: flex;
+    background-image: URL("/resources/images/Yakima/Yakima\,_Washington_as_seen_from_Lookout_Point.jpg");
+    background-size: cover;
+    position: 50%;
     height: 600px;
     text-align: center;
     justify-content: center;
@@ -95,18 +138,42 @@ header nav {
     flex-direction: row;
     width: 85%;
     margin: 80px auto;
+    padding: 20px 0;
+    border-top: 3px black solid;
 }
 
 main {
-    padding: 0px 50px 0px 50px;
-    
+    padding: 0 50px 0 50px;
+    margin: 0 auto;
+
 }
-
-
+#statemap{
+    float: right;
+    width: 40%;
+    padding: 0 20px;
+}
 aside {
-    padding: 0px 0px 0px 50px;
+    padding: 0 40px 0 40px;
     border-left: 1px solid black;
+    width: 400px;
 }
+aside a{
+    color: darkgreen;
+}
+aside a:hover{
+    opacity:0.5;
+}
+
+aside ol{
+    padding: 0;
+}
+#trivago{
+    color: gold;
+}
+#trivago:hover{
+    opacity: 0.5;
+}
+
 
 #introduction {
     text-align: center;
@@ -114,33 +181,78 @@ aside {
     top: 80px;
     width: 80%;
     margin: 15px auto;
-    border-bottom: 3px black solid;
-
+}
+table{
+    width: 100%;
 }
 
+th, td{
+    border: 1px solid black;
+    padding: 20px;
+}
 
+#contact {
+    position: relative;
+    top: 80px;
+    width: 40%;
+}
 
 form {
     display: flex;
     flex-direction: column;
 }
 
-#contact {
-    position: relative;
-    top: 80px;
-    width: 40vw;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+form input {
+    margin: 10px 0 10px 0;
+}
+
+form textarea {
+    width: 100%;
 }
 
 footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
     background-color: rgb(40, 35, 35);
     height: 40px;
-    width: 100%;
     color: white;
     text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  
+    aside {
+        display: none;
+    }
+
+    header {
+        flex-direction: column;
+        height: 150px;
+    }
+
+    header nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-logo {
+        display: flex;
+        margin: 10px auto;
+    }
+
+    .header-logo img {
+        width: 80px;
+    }
+
+    .navlinks {
+        display: flex;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    #contact {
+        width: inherit;
+    }
+    #Calendar{
+        display: none;
+    }
 }
