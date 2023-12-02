@@ -1,0 +1,146 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+
+header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(40, 35, 35);
+    height: 80px;
+    width: 100%;
+    z-index: 99;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    margin: 5px;
+    padding-left: 10px;
+}
+
+.header-logo img {
+    width: 80px;
+}
+
+.navlinks {
+    display: flex;
+}
+
+.navlinks li {
+    margin: 15px;
+    list-style: none;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: rgb(221, 214, 214);
+}
+
+.navlinks a:hover {
+    opacity: 0.9;
+    color: darkgreen;
+}
+
+#contact-button {
+    box-shadow: 10px 5px 5px black;
+    ;
+    border: solid 1px darkgreen;
+    padding: 0px 5px;
+    background-color: green;
+
+}
+
+#contact-button-link {
+    color: black;
+}
+
+#contact-button:hover {
+    opacity: 0.7;
+}
+
+.banner {
+    display: flex;
+    background-image: URL("https://eluho.wa.gov/sites/default/files/styles/front_banner/public/2023-03/MtShuksan-banner-2000x700_3.jpg?itok=hqYZ-uat");
+    background-size: cover;
+    height: 600px;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    top: 80px;
+}
+
+.banner img {
+    width: 20%;
+}
+
+.center-section {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    margin: 80px auto;
+}
+
+main {
+    padding: 0px 50px 0px 50px;
+    
+}
+
+
+aside {
+    padding: 0px 0px 0px 50px;
+    border-left: 1px solid black;
+}
+
+#introduction {
+    text-align: center;
+    position: relative;
+    top: 80px;
+    width: 80%;
+    margin: 15px auto;
+    border-bottom: 3px black solid;
+
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact {
+    position: relative;
+    top: 80px;
+    width: 40vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(40, 35, 35);
+    height: 40px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
