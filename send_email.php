@@ -2,26 +2,18 @@
 require 'vendor/autoload.php';
 require 'config.php';
 
-/* You'll need to add this to a config.php file and then add the config.php file to your 
-.gitignore then upload the config.php to your hosting provider and restric permissions to owner for that file.
-
-<?php
-$sender_email = '';
-$sender_password = '';
-$smtp_server = '';
-$smtp_port = ; */
-
-
-$user_name = isset($_POST['user_name']) ? $_POST['user_name'] : '';
+$user_first_name = isset($_POST['user_first_name']) ? $_POST['user_first_name'] : '';
+$user_last_name = isset($_POST['user_last_name']) ? $_POST['user_last_name'] : '';
 $user_email = isset($_POST['user_email']) ? $_POST['user_email'] : '';
+$confirm_user_email = isset($_POST['confirm_user_email']) ? $_POST['confirm_user_email'] : '';
 $email_subject = isset($_POST['email_subject']) ? $_POST['email_subject'] : '';
 $email_body = isset($_POST['email_body']) ? $_POST['email_body'] : '';
 
-if (empty($user_name) || empty($user_email) || empty($email_subject) || empty($email_body)) {
+if (empty($user_first_name) || empty($user_last_name) || empty($user_email) || empty($confirm_user_email) || empty($email_subject) || empty($email_body)) {
     die('Error: Please fill out all required fields.');
 }
 
-function send_email($user_name, $user_email, $email_subject, $email_body) {
+function send_email($user_first_name, $user_last_name, $user_email, $confirm_user_email, $email_subject, $email_body) {
     global $sender_email, $sender_password, $smtp_server, $smtp_port;
 
     // Create a PHPMailer object
@@ -38,20 +30,20 @@ function send_email($user_name, $user_email, $email_subject, $email_body) {
         $mail->SMTPSecure = 'tls';
 
         // Set the email content
-        $mail->setFrom('$sender_email', $user_name);
+        $mail->setFrom($sender_email, $user_first_name . ' ' . $user_last_name);
         $mail->addAddress($sender_email);
         $mail->Subject = $email_subject;
-        $mail->addReplyTo($user_email, $user_name); // Set the "Reply-To" address to the user's email and name
+        $mail->addReplyTo($user_email, $user_first_name . ' ' . $user_last_name); // Set the "Reply-To" address to the user's email and name
 
         // Include user's email in the email body
-        $mail->Body = "User's Name: $user_name\nUser's Email: $user_email\n\n" . $email_body;
+        $mail->Body = "User's Name: $user_first_name $user_last_name\nUser's Email: $user_email\n\n" . $email_body;
 
         // Add custom header for "From" name
-        $mail->addCustomHeader('From: ' . $user_name . ' <' . $user_email . '>');
+        $mail->addCustomHeader('From: ' . $user_first_name . ' ' . $user_last_name . ' <' . $user_email . '>');
 
         // Send the email
         if ($mail->send()) {
-            echo 'Email sent successfully, thank you. If you need to contact me immediently, my number is 509-273-0050.';
+            echo 'Email sent successfully, thank you. If you need to contact me immediately, my number is 509-273-0050.';
         } else {
             echo 'Error sending email: ' . $mail->ErrorInfo;
             return;
@@ -62,4 +54,5 @@ function send_email($user_name, $user_email, $email_subject, $email_body) {
 }
 
 // Call the function to send the email
-send_email($user_name, $user_email, $email_subject, $email_body);
+send_email($user_first_name, $user_last_name, $user_email, $confirm_user_email, $email_subject, $email_body);
+?>

@@ -8,7 +8,6 @@ body {
     color:#ffffff;
     background-color: rgb(54, 49, 49);
 }
-
 header {
     display: flex;
     position: fixed;
@@ -20,56 +19,44 @@ header {
     width: 100%;
     z-index: 99;
 }
-
 header nav {
     display: flex;
     align-items: center;
 }
-
 .header-logo {
     display: flex;
     margin: 5px;
     padding-left: 10px;
 }
-
 .header-logo img {
     width: 80px;
 }
-
 .navlinks {
     display: flex;
 }
-
 .navlinks li {
     margin: 15px;
     list-style: none;
 }
-
 .navlinks a, aside a {
     text-decoration: none;
     color: rgb(221, 214, 214);
 }
-
 .navlinks a:hover, aside a:hover {
-    opacity: 0.9;
     color: darkgreen;
 }
-
 #contact-button {
     box-shadow: 10px 5px 5px black;
     border: solid 1px darkgreen;
     padding: 0 5px;
     background-color: green;
 }
-
 #contact-button-link {
     color: black;
 }
-
 #contact-button:hover {
     opacity: 0.7;
 }
-
 .statebanner {
     display: flex;
     background-image: URL("/resources/images/Washington/MtShuksan-banner-2000x700_3.jpg");
@@ -83,7 +70,6 @@ header nav {
     position: relative;
     top: 80px;
 }
-
 .olympiabanner {
     display: flex;
     background-image: URL("/resources/images/Olympia/olympia-capitol-campus-cherry-blossoms-by-just-experience-olympia-and-beyond-1024x530.jpg");
@@ -98,7 +84,6 @@ header nav {
     position: relative;
     top: 80px;
 }
-
 .seattlebanner {
     display: flex;
     background-image: URL("/resources/images/Seattle/Seattle_3_banner.jpg");
@@ -113,7 +98,6 @@ header nav {
     position: relative;
     top: 80px;
 }
-
 .yakimabanner {
     display: flex;
     background-image: URL("/resources/images/Yakima/Yakima\,_Washington_as_seen_from_Lookout_Point.jpg");
@@ -128,11 +112,9 @@ header nav {
     position: relative;
     top: 80px;
 }
-
-.banner img {
+.statebanner img {
     width: 20%;
 }
-
 .center-section {
     display: flex;
     flex-direction: row;
@@ -141,11 +123,9 @@ header nav {
     padding: 20px 0;
     border-top: 3px black solid;
 }
-
 main {
     padding: 0 50px 0 50px;
     margin: 0 auto;
-
 }
 #statemap{
     float: right;
@@ -163,7 +143,6 @@ aside a{
 aside a:hover{
     opacity:0.5;
 }
-
 aside ol{
     padding: 0;
 }
@@ -173,8 +152,6 @@ aside ol{
 #trivago:hover{
     opacity: 0.5;
 }
-
-
 #introduction {
     text-align: center;
     position: relative;
@@ -185,74 +162,65 @@ aside ol{
 table{
     width: 100%;
 }
-
 th, td{
     border: 1px solid black;
     padding: 20px;
 }
-
 #contact {
     position: relative;
     top: 80px;
     width: 40%;
 }
-
 form {
     display: flex;
     flex-direction: column;
 }
-
 form input {
     margin: 10px 0 10px 0;
 }
-
 form textarea {
     width: 100%;
 }
-
 footer {
     background-color: rgb(40, 35, 35);
     height: 40px;
     color: white;
     text-align: center;
 }
-
-
 @media only screen and (max-width: 768px) {
-  
     aside {
         display: none;
-    }
-
+   }
     header {
         flex-direction: column;
         height: 150px;
-    }
-
+   }
     header nav {
         display: flex;
         align-items: center;
-    }
-
+   }
     .header-logo {
         display: flex;
         margin: 10px auto;
-    }
-
+   }
     .header-logo img {
         width: 80px;
-    }
-
+   }
+   .statebanner img {
+    width: 50%;
+}
     .navlinks {
         display: flex;
         padding: 0;
         margin: 0 auto;
-    }
-
+   }
     #contact {
         width: inherit;
-    }
+   }
     #Calendar{
         display: none;
-    }
+   }
+   footer{
+    height: 80px;
+   }
 }
