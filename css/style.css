@@ -59,7 +59,7 @@ header nav {
 }
 .statebanner {
     display: flex;
-    background-image: URL("/resources/images/Washington/MtShuksan-banner-2000x700_3.jpg");
+    background-image: URL("background-banners/Washington/MtShuksan-banner-2000x700_3.jpg");
     background-size: cover;
     height: 600px;
     text-align: center;
@@ -72,7 +72,7 @@ header nav {
 }
 .olympiabanner {
     display: flex;
-    background-image: URL("/resources/images/Olympia/olympia-capitol-campus-cherry-blossoms-by-just-experience-olympia-and-beyond-1024x530.jpg");
+    background-image: URL("background-banners/Olympia/olympia-capitol-campus-cherry-blossoms-by-just-experience-olympia-and-beyond-1024x530.jpg");
     background-size: cover;
     background-position: 50%;
     height: 600px;
@@ -86,7 +86,7 @@ header nav {
 }
 .seattlebanner {
     display: flex;
-    background-image: URL("/resources/images/Seattle/Seattle_3_banner.jpg");
+    background-image: URL("background-banners/Seattle/Seattle_3_banner.jpg");
     background-size: cover;
     background-position: 50%;
     height: 600px;
@@ -100,7 +100,7 @@ header nav {
 }
 .yakimabanner {
     display: flex;
-    background-image: URL("/resources/images/Yakima/Yakima\,_Washington_as_seen_from_Lookout_Point.jpg");
+    background-image: URL("background-banners/Yakima/Yakima\,_Washington_as_seen_from_Lookout_Point.jpg");
     background-size: cover;
     position: 50%;
     height: 600px;
@@ -187,6 +187,19 @@ footer {
     color: white;
     text-align: center;
 }
+
+.absolute-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    color: black;
+}
+
 @media only screen and (max-width: 768px) {
     aside {
         display: none;
